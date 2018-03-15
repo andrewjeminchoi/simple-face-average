@@ -16,7 +16,7 @@ def readPoints(path) :
     pointsArray = [];
 
     #List all files in the directory and read points from text files one by one
-    for filePath in os.listdir(path):
+    for filePath in sorted(os.listdir(path)):
         
         if filePath.endswith(".txt"):
             
@@ -41,7 +41,7 @@ def readImages(path) :
     imagesArray = [];
     
     #List all files in the directory and read points from text files one by one
-    for filePath in os.listdir(path):
+    for filePath in sorted(os.listdir(path)):
         if filePath.endswith(".jpg"):
             # Read image found.
             img = cv2.imread(os.path.join(path,filePath));
@@ -191,17 +191,17 @@ def warpTriangle(img1, img2, t1, t2) :
 if __name__ == '__main__' :
     
     path = 'presidents/'
-    
+
     # Dimensions of output image
-    w = 600;
-    h = 600;
+    w = 900;
+    h = 900;
 
     # Read points for all images
     allPoints = readPoints(path);
-    
+
     # Read all images
     images = readImages(path);
-    
+
     # Eye corners
     eyecornerDst = [ (np.int(0.3 * w ), np.int(h / 3)), (np.int(0.7 * w ), np.int(h / 3)) ];
     
