@@ -1,6 +1,6 @@
 # Face Averaging with dlib and OpenCV
 
-This Python program averages faces of different people. You must have [dlib](http://dlib.net/) installed for this to work, and download the shape_predictor_68_face_landmarks.dat file. 
+This Python 2.x program averages faces of different people. You must have [dlib](http://dlib.net/) installed for this to work, and download the shape_predictor_68_face_landmarks.dat file. 
 
 To run, first have your images (jpg) ready and run:
 ```
